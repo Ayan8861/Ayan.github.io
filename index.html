@@ -142,6 +142,19 @@
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
+if (localStorage.getItem("isLoggedIn") === "true") {
+  document.querySelector(".nav-links").innerHTML = `
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="#" onclick="logout()">Logout</a></li>
+  `;
+}
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  location.reload();
+}
     </script>
 </body>
 </html>

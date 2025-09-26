@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Hope of Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Hope of <span>Light</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Register Section -->
+    <section style="padding: 5rem 0; background-color: #f1f7ff;">
+        <div class="container">
+            <div class="auth-container">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Join Our Community</h2>
+                <form class="auth-form" id="registerForm">
+                    <div class="form-group">
+                        <label for="regName">Full Name</label>
+                        <input type="text" id="regName" class="form-control" required>
+                        <div class="error" id="regNameError">Name is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" class="form-control" required>
+                        <div class="error" id="regEmailError">Valid email is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPhone">Phone Number</label>
+                        <input type="tel" id="regPhone" class="form-control" required>
+                        <div class="error" id="regPhoneError">Phone number is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" class="form-control" required>
+                        <div class="error" id="regPasswordError">Password must be at least 6 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <input type="password" id="regConfirmPassword" class="form-control" required>
+                        <div class="error" id="regConfirmPasswordError">Passwords do not match</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regInterest">Interest (e.g., Volunteering, Donating)</label>
+                        <input type="text" id="regInterest" class="form-control">
+                        <div class="error" id="regInterestError">Interest is optional but helpful</div>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="success-message" id="registerSuccess">Registration successful! You can now log in.</div>
+                </form>
+                <div class="auth-link">
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                </div>

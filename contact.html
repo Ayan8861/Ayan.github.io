@@ -1,0 +1,168 @@
+<!-- contact.html (Contact Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hope of Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Hope of <span>Light</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div style="width: 50px; height: 50px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-size: 1.2rem;">📍</div>
+                        <div>
+                            <h4>Our Address</h4>
+                            <p>123 Hope Street, Community City, CC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div style="width: 50px; height: 50px; background: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-size: 1.2rem;">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div style="width: 50px; height: 50px; background: var(--accent-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-size: 1.2rem;">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@hopeoflight.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div style="width: 50px; height: 50px; background: var(--success-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-size: 1.2rem;">🕒</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                        <div class="error" id="nameError">Name is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <div class="error" id="emailError">Valid email is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                        <div class="error" id="subjectError">Subject is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                        <div class="error" id="messageError">Message is required</div>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                    <div class="success-message" id="successMessage">Thank you! Your message has been sent.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Hope of Light is dedicated to empowering communities through sustainable development programs.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Hope of Light. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Contact Form Validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            const fields = ['name', 'email', 'subject', 'message'];
+            fields.forEach(field => {
+                const input = document.getElementById(field);
+                const error = document.getElementById(field + 'Error');
+                input.classList.remove('error-field');
+                error.style.display = 'none';
+                
+                if (!input.value.trim()) {
+                    input.classList.add('error-field');
+                    error.style.display = 'block';
+                    isValid = false;
+                } else if (field === 'email' && !/\S+@\S+\.\S+/.test(input.value)) {
+                    input.classList.add('error-field');
+                    error.textContent = 'Valid email is required';
+                    error.style.display = 'block';
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                document.getElementById('successMessage').style.display = 'block';
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>

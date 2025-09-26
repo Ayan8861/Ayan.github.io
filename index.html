@@ -1,0 +1,147 @@
+<!-- index.html (Home Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Hope of Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Hope of <span>Light</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bringing Hope and Light to Communities</h1>
+                <p>We are a non-profit organization dedicated to improving lives through education, healthcare, and community development programs.</p>
+                <a href="register.html" class="btn">Join Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Who We Are</h2>
+                <p>Hope of Light is committed to creating sustainable change in underserved communities around the world.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>To empower communities by providing access to education, healthcare, and economic opportunities that create lasting change.</p>
+                    <p>Since our founding in 2010, we've impacted over 50,000 lives across 15 countries through our various initiatives and programs.</p>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x400/4a90e2/ffffff?text=Community+Gathering" alt="Community gathering with diverse group of people">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Preview -->
+    <section style="background-color: #f1f7ff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Projects</h2>
+                <p>We run various programs focused on education, healthcare, and community development.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x200/4a90e2/ffffff?text=Education+Project" alt="Children studying in a classroom">
+                    </div>
+                    <div class="project-info">
+                        <h3>Education for All</h3>
+                        <p>Providing quality education to children in remote areas through school construction and teacher training.</p>
+                        <a href="projects.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x200/50e3c2/ffffff?text=Healthcare+Project" alt="Medical clinic with doctors and patients">
+                    </div>
+                    <div class="project-info">
+                        <h3>Healthcare Access</h3>
+                        <p>Establishing medical clinics and providing health education in underserved communities.</p>
+                        <a href="projects.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x200/f5a623/ffffff?text=Community+Project" alt="Community garden with people working together">
+                    </div>
+                    <div class="project-info">
+                        <h3>Community Development</h3>
+                        <p>Creating sustainable livelihoods through agriculture, clean water, and infrastructure projects.</p>
+                        <a href="projects.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Hope of Light is dedicated to empowering communities through sustainable development programs.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#">?</a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Hope of Light. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
